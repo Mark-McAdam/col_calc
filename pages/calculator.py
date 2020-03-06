@@ -13,8 +13,12 @@ from app import app
 
 column1 = dbc.Col(
     [
-        dcc.Markdown('### Predicted Cost of Living', className='mb-5'), 
-        html.Div(id='prediction-content', className='lead')
+        dcc.Markdown('### Predicted Cost of Living', className='mb-4'), 
+        dcc.Markdown('##### Based on 566 Cities', className='mb-3'), 
+        dcc.Markdown('##### Across 166 Countries', className='mb-5'), 
+        html.Div(id='prediction-content', className='lead'),
+
+
 
         
     ],
@@ -123,4 +127,4 @@ def predict (rent_index, restaurant_price_index, groceries_index, apartment_city
       data = [[rent_index, restaurant_price_index, groceries_index, apartment_city_center_1bed, apartment_utilities, internet_monthly]]
   )
   y_pred = pipeline.predict(df)[0]
-  return f'Cost of Living {y_pred:.4f}'
+  return f'Cost of Living {y_pred:.2f}'
