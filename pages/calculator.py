@@ -1,5 +1,6 @@
 from joblib import load
 pipeline = load('assets/pipeline.joblib')
+print('!!! Pipeline Loaded !!!')
 
 import dash
 import dash_bootstrap_components as dbc
