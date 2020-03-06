@@ -12,7 +12,7 @@ from app import app
 
 column1 = dbc.Col(
     [
-        dcc.Markdown('## Predictions', className='mb-5'), 
+        dcc.Markdown('## Predict Cost of Living', className='mb-5'), 
         dcc.Markdown('#### Year'), 
         dcc.Slider(
             id='year', 
